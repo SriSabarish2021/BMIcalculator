@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+#root {
+  max-width: 1280px;
+  min-width: 200px;
+  width: 1000px;
+  min-height: 500px;
+  height: auto;
+  border-radius: 10px;
+  background-color: aliceblue;
+
+}
+.flex{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input{
+  width: 450px;
+  min-height: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: -50px;
+  margin-right: 30px;
+}
+.input input{
+  height: 50px;
+  padding-left: 10px;
+  border:1px solid rgb(129, 128, 128);
+  border-radius: 10px;
+  margin-top: 5px;
+  font-family: 'SUSE';
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input p{
+  font-size: 22px;
+  font-family:'Kanit';
+  font-weight: 600;
+  color: rgb(0, 183, 255);
+  letter-spacing: 2px;
+}
+.input label{
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(88, 87, 87);
+  margin-top: 20px;
+  font-family: 'SUSE'
+}
+.btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+.calcbtn{
+  height: 50px;
+  width: 120px;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'SUSE';
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  transition-duration: 0.7s;
+}
+.calcbtn:hover{
+  background-color:  rgb(120, 242, 255);
+    transition-duration: 0.7s;
+}
+.clrbtn{
+  height: 50px;
+  width: 120px;
+  background-color: rgb(243, 157, 72);
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'SUSE';
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  transition-duration: 0.7s;
+}
+.clrbtn:hover{
+  background-color:  rgb(243, 112, 72);
+    transition-duration: 0.7s;
+}
+
+@media screen and (max-width:1076px) {
+  #root {
+    width: 750px;
+  }
+  .image img{
+    width: 400px;
+  }
+}
+
+
+@media screen and (max-width:806px) {
+  #root {
+    width: 650px;
+  }
+  .image img{
+    width: 300px;
+  }
+}
+
+
+@media screen and (max-width:690px) {
+  #root {
+    width: 500px;
+  }
+  .image img{
+    display: none;
+  }
+  .input p{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:550px) {
+  #root {
+    width: 400px;
+  }
+
+}
+@media screen and (max-width:440px) {
+  #root {
+    width: 340px;
+  }
+
+}
+@media screen and (max-width:350px) {
+  #root {
+    width: 290px;
+    padding-left: 10px;
+  }
+
+}
+
+@media screen and (max-width:315px) {
+  #root {
+    width: 240px;
+  }
+  
+  .input{
+    width: 200px;
+  }
+  .calcbtn{
+    font-size: 12px;
+  }
+  .clrbtn{
+    font-size: 12px;
+  }
+}
