@@ -52,7 +52,7 @@ function App() {
           <Error/>
         </div>
         <div className='content'>
-          <p>Your BMI is: {Number(curbmi.toFixed(2))}</p>
+          <p>Your BMI is: {Number(curbmi).toFixed(2)}</p>
           {curbmi<18.5?<p>Underweight</p>:curbmi>18.5&&curbmi<24.9?<p>Normal weight</p>:curbmi>24.9&&curbmi<29.9?<p>Overweight</p>:curbmi>29.9&&curbmi<34.9?<p>Class 1 Moderate Obesity</p>:curbmi>34.9&&curbmi<39.9?<p>Class 2 Severe Obesity</p>:curbmi>39.9?<p>Class 3 Very severe or morbid Obesity</p>:console.log("be fitter")
           }
         </div>
