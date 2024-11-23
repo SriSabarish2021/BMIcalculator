@@ -6,9 +6,9 @@ import './erro.css'
 function App() {
   const[curhei,chnagehei]=useState()
   const[curwei,chnagewei]=useState()
+  const[curbmi,newbmi]=useState()
   let meter;
   let sqr;
-  let bmi;
   const reff=useRef()
   let result=document.querySelector(".content")
   let errorr=document.querySelector(".error")
@@ -17,12 +17,12 @@ function App() {
       result.style.display ="none"
       errorr.style.display ="block"
     }else{
-      meter=Number(curhei/100)
-      sqr=Math.pow(meter,2)
-      bmi=curwei/sqr.toFixed(2)
       errorr.style.display ="none"
       result.style.display ="block"
-      console.log(height,weight);
+      meter=Number(height/100)
+      sqr=Math.pow(meter,2)
+      newbmi(weight/sqr.toFixed(2))
+      console.log(height,weight,meter,sqr);
     }
   }
 
@@ -52,8 +52,8 @@ function App() {
           <Error/>
         </div>
         <div className='content'>
-          <p>Your BMI is: {bmi.toFixed(2)}</p>
-          {bmi<18.5?<p>Underweight</p>:bmi>18.5&&bmi<24.9?<p>Normal weight</p>:bmi>24.9&&bmi<29.9?<p>Overweight</p>:bmi>29.9&&bmi<34.9?<p>Class 1 Moderate Obesity</p>:bmi>34.9&&bmi<39.9?<p>Class 2 Severe Obesity</p>:bmi>39.9?<p>Class 3 Very severe or morbid Obesity</p>:console.log("be fitter")
+          <p>Your BMI is: {Number(curbmi.toFixed(2))}</p>
+          {curbmi<18.5?<p>Underweight</p>:curbmi>18.5&&curbmi<24.9?<p>Normal weight</p>:curbmi>24.9&&curbmi<29.9?<p>Overweight</p>:curbmi>29.9&&curbmi<34.9?<p>Class 1 Moderate Obesity</p>:curbmi>34.9&&curbmi<39.9?<p>Class 2 Severe Obesity</p>:curbmi>39.9?<p>Class 3 Very severe or morbid Obesity</p>:console.log("be fitter")
           }
         </div>
       </div>
