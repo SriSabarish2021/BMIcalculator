@@ -6,6 +6,9 @@ import './erro.css'
 function App() {
   const[curhei,chnagehei]=useState()
   const[curwei,chnagewei]=useState()
+  let meter;
+  let sqr;
+  let bmi;
   const reff=useRef()
   let result=document.querySelector(".content")
   let errorr=document.querySelector(".error")
@@ -14,6 +17,9 @@ function App() {
       result.style.display ="none"
       errorr.style.display ="block"
     }else{
+      meter=Number(curhei/100)
+      sqr=Math.pow(meter,2)
+      bmi=curwei/sqr.toFixed(2)
       errorr.style.display ="none"
       result.style.display ="block"
       console.log(height,weight);
@@ -26,9 +32,7 @@ function App() {
     result.style.display ="none"
   }
 
-  let meter=Number(curhei/100)
-  let sqr=Math.pow(meter,2)
-  let bmi=curwei/sqr.toFixed(2)
+
   return (
     <div className='flex'>
       <div className='image'>
